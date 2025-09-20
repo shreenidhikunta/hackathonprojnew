@@ -4,15 +4,17 @@
     export let g3 = 'E1FFDB';
     export let g4 = '#B8D7FF';
     import prismlogo from '../assets/prismlogo.png'; 
+    let name = "";
+    let goal = "";
+    let inspiration = "";
+    let dream = "";
+    let tasks = "";
 
-    function goToAbout() {
-    window.location.href = "/Mission.html"; 
-    }
-
-    function goToProduct() {
-    window.location.href = "/Product.html"; 
-    }
-
+    const handleSubmit = (event) => {
+    event.preventDefault();  
+    console.log({ goal, inspiration, dream, tasks });  
+    alert(`Thanks for submitting, ${name}!`);   
+    };
 
 </script>
 
@@ -149,7 +151,6 @@
 <!-- ---------------- WHITE CARD ---------------- -->
 
 <nav>
-  <button on:click = {goToAbout}>our mission</button>
   <button on:click = {goToProduct}>get started</button>
 </nav>
 
@@ -174,6 +175,14 @@
     into an actionable path to success.
   </p>
 </div>
+
+<form on:submit={handleSubmit}>
+  <input type="text" bind:value={goal} placeholder="Goal" required />
+  <input type="number" bind:value={dream} placeholder="Dream" required />
+  <input type="Inspiration" bind:value={inspiration} placeholder="Email" required />
+  <textarea bind:value={tasks} placeholder="task"></textarea>
+  <button type="submit">Submit</button>
+</form>
 
 
 
