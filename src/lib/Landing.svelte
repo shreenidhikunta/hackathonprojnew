@@ -164,6 +164,16 @@
       alt="prism icon" 
       width="60"
     />
+    <form on:submit={handleSubmit}>
+  <input type="text" bind:value={goal} placeholder="Goal" required />
+  <input type="number" bind:value={dream} placeholder="Dream" required />
+  <input type="Inspiration" bind:value={inspiration} placeholder="Email" required />
+  <textarea bind:value={tasks} placeholder="task"></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+
+
   </div>
 
   <div class="tagline">many dreams, clear path</div>
@@ -176,13 +186,6 @@
   </p>
 </div>
 
-<form on:submit={handleSubmit}>
-  <input type="text" bind:value={goal} placeholder="Goal" required />
-  <input type="number" bind:value={dream} placeholder="Dream" required />
-  <input type="Inspiration" bind:value={inspiration} placeholder="Email" required />
-  <textarea bind:value={tasks} placeholder="task"></textarea>
-  <button type="submit">Submit</button>
-</form>
 
 
 
